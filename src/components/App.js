@@ -6,13 +6,33 @@ import '../styles/App.scss';
 function App() {
   //variables de estado
  const [dataList, setDataList] = useState([]);
+ 
+
   //useEffect
   useEffect(()=>{
     CallToApi().then(dataApi=>{
       console.log(dataApi);
+
       setDataList(dataApi);
+      
+
     })
+    
   },[]);
+
+  //funciones
+const setPlaceholder =()=>{
+ const elementsNoPicture= dataList.filter( character=>character.image === "");
+  
+for (let eachElement of elementsNoPicture){
+  eachElement.image =" https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter"
+};
+
+};
+setPlaceholder();
+
+
+
   return (
     <div>
       <header>
