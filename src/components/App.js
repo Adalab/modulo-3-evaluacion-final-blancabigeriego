@@ -1,4 +1,5 @@
 import CallToApi from '../services/CallToApi';
+import Filters from './Filters';
 import CharacterList from './CharacterList';
 import { useState, useEffect } from 'react';
 import '../styles/App.scss';
@@ -6,6 +7,7 @@ import '../styles/App.scss';
 function App() {
   //variables de estado
  const [dataList, setDataList] = useState([]);
+ const [filteredName, setFilteredName] = useState("");
  
 
   //useEffect
@@ -25,11 +27,19 @@ const setPlaceholder =()=>{
  const elementsNoPicture= dataList.filter( character=>character.image === "");
   
 for (let eachElement of elementsNoPicture){
-  eachElement.image =" https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter"
+  eachElement.image ="https://www.telasdeluna.com/18765-medium_default/tela-harry-potter-king-s-cross.jpg"
+  // " https://via.placeholder.com/210x295/aabbcd/000000/?text=Harry-Potter"
 };
 
 };
 setPlaceholder();
+
+//funciones lifting
+
+const handleInputName = (data)=>{
+  setFilteredName(data);
+
+};
 
 
 
@@ -39,7 +49,8 @@ setPlaceholder();
         <h1>HARRY POTTER</h1>
       </header>
       <main>
-        <CharacterList dataList={dataList} />
+        <Filters dataList={dataList} handleInputName={handleInputName}/>
+        <CharacterList dataList={dataList} filteredName={filteredName} />
       </main>
     </div>
   );
