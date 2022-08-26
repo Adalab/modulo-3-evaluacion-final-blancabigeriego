@@ -1,4 +1,5 @@
 import CallToApi from '../services/CallToApi';
+import CharacterDetail from './CharacterDetail';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import { useState, useEffect } from 'react';
