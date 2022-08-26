@@ -7,7 +7,7 @@ function FilterByName (props){
 
         <form>
             <label name="name">Buscar por personaje:</label>
-            <input type="text" id="name" name="name" onChange={handleChange}></input>
+            <input type="text" id="name" name="name" onChange={handleChange} value={props.dataList.name}></input>
         </form>
     )
 }

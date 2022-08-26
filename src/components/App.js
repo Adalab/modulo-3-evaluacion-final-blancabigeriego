@@ -8,6 +8,7 @@ function App() {
   //variables de estado
  const [dataList, setDataList] = useState([]);
  const [filteredName, setFilteredName] = useState("");
+ const[filteredHouse, setFilteredHouse] = useState("Gryffindor");
  
 
   //useEffect
@@ -40,6 +41,9 @@ const handleInputName = (data)=>{
   setFilteredName(data);
 
 };
+const handleHouseSelect = (data)=>{
+  setFilteredHouse(data);
+};
 
 
 
@@ -49,8 +53,9 @@ const handleInputName = (data)=>{
         <h1>HARRY POTTER</h1>
       </header>
       <main>
-        <Filters dataList={dataList} handleInputName={handleInputName}/>
-        <CharacterList dataList={dataList} filteredName={filteredName} />
+        <Filters dataList={dataList} handleInputName={handleInputName} filteredHouse={filteredHouse}
+        handleHouseSelect={handleHouseSelect}/>
+        <CharacterList dataList={dataList} filteredName={filteredName} filteredHouse={filteredHouse}/>
       </main>
     </div>
   );
