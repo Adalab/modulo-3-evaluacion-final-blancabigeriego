@@ -1,7 +1,7 @@
 function CallToApi(){
     return fetch('https://hp-api.herokuapp.com/api/characters').then(response=>response.json())
     .then(data=>{
-        const cleanedData = data.map(character=>{
+        const cleanedData = data.map((character, index)=>{
             return{
                 name: character.name,
                 image: character.image,
@@ -10,6 +10,7 @@ function CallToApi(){
                 gender:character.gender,
                 house: character.house,
                 alt_name:character.alternate_name,
+                id: index,
 
             }
         });

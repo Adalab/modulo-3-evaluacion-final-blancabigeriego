@@ -3,7 +3,12 @@ import CharacterDetail from './CharacterDetail';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import { useState, useEffect } from 'react';
+import {Route, Routes} from 'react-router-dom';
 import '../styles/App.scss';
+import { useLocation } from 'react-router-dom';
+import { matchPath} from 'react-router-dom';
+import { object } from 'prop-types';
+
 
 function App() {
   //variables de estado
@@ -15,12 +20,13 @@ function App() {
   //useEffect
   useEffect(()=>{
     CallToApi().then(dataApi=>{
-      console.log(dataApi);
+     
 
       setDataList(dataApi);
       
 
     })
+    
     
   },[]);
 
@@ -46,18 +52,51 @@ const handleHouseSelect = (data)=>{
   setFilteredHouse(data);
 };
 
+//obtener id
+
+const { pathname } = useLocation();
+console.log(pathname);
+const dataPath = matchPath("/character/:characterId", pathname);
+
+const characterId = dataPath !== null ? dataPath.params.characterId : null;
+console.log(characterId)
+console.log(dataList)
+const characterFound = dataList.find(character => { return character.id === characterId });
+
+console.log(characterFound);
+
+
+// const getCharacter=()=>{
+//   console.log(dataList)
+//   const charFound = dataList.find(character => {return character.id === charId})
+//   console.log(charFound)
+//   return charFound;
+// };
+// setTimeout(getCharacter, 5000);
 
 
   return (
     <div>
       <header>
         <h1>HARRY POTTER</h1>
+        <Routes>
+          <Route 
+            path="/" 
+            element={<><main>
+            <Filters dataList={dataList} handleInputName={handleInputName} filteredHouse={filteredHouse}
+            handleHouseSelect={handleHouseSelect}/>
+            <CharacterList dataList={dataList} filteredName={filteredName} filteredHouse={filteredHouse}/>
+          </main></>}/>
+          <Route
+            path="/character/:charId"
+            element={
+              <CharacterDetail character={characterFound} />
+            }
+            />
+
+        </Routes>
       </header>
-      <main>
-        <Filters dataList={dataList} handleInputName={handleInputName} filteredHouse={filteredHouse}
-        handleHouseSelect={handleHouseSelect}/>
-        <CharacterList dataList={dataList} filteredName={filteredName} filteredHouse={filteredHouse}/>
-      </main>
+      
     </div>
   );
 }

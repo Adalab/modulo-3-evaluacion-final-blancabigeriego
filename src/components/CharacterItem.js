@@ -1,7 +1,10 @@
+import {Link} from 'react-router-dom';
+
 function CharacterItem(props){
+    
     return(
         <li >
-            <a href="#">
+            <Link to={`/character/${props.element.id}`}>
                 <img 
                 src={props.element.image}
                 alt={`Foto de ${props.element.name}`}
@@ -11,7 +14,7 @@ function CharacterItem(props){
                     <p>Especie: {props.element.species}</p>
                 </section>
                 
-            </a>
+                </Link>
         </li>
     )
 }
