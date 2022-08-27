@@ -4,7 +4,7 @@ function FilterByName (props){
         props.handleInputName(ev.target.value)
     };
     const handleEnter=(ev)=>{
-        console.log(ev.keyCode)
+        
         if (ev.keyCode === 13){
             ev.preventDefault()
         }

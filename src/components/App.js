@@ -45,6 +45,7 @@ setPlaceholder();
 //funciones lifting
 
 const handleInputName = (data)=>{
+  
   setFilteredName(data);
 
 };
@@ -62,7 +63,7 @@ const characterId = dataPath !== null ? dataPath.params.characterId : null;
 
 const characterFound = dataList.find(character =>  {return character.id === parseInt(characterId) });
 
-console.log(characterFound)
+
 
 
 
