@@ -7,7 +7,7 @@ import {Route, Routes} from 'react-router-dom';
 import '../styles/App.scss';
 import { useLocation } from 'react-router-dom';
 import { matchPath} from 'react-router-dom';
-import { object } from 'prop-types';
+
 
 
 function App() {
@@ -61,7 +61,7 @@ const dataPath = matchPath("/character/:characterId", pathname);
 const characterId = dataPath !== null ? dataPath.params.characterId : null;
 console.log(characterId)
 console.log(dataList)
-const characterFound = dataList.find(character => { return character.id === characterId });
+const characterFound = dataList.find(character =>  {return character.id === parseInt(characterId) });
 
 console.log(characterFound);
 

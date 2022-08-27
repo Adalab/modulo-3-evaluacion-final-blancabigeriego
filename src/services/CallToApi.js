@@ -9,7 +9,7 @@ function CallToApi(){
                 species:character.species,
                 gender:character.gender,
                 house: character.house,
-                alt_name:character.alternate_name,
+                alt_name: character.alternate_name,
                 id: index,
 
             }

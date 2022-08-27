@@ -2,12 +2,12 @@ function CharacterDetail (props){
     return(
         <section>
             <img 
-            src=" https://via.placeholder.com/210x295/aabbcd/000000/?text=Harry-Potter"
-            alt="Foto de person"
-            title="Fotooo"/>
+            src={props.character.image}
+            alt={`Foto de ${props.character.name}`}
+            title={`Foto de ${props.character.name}`}/>
             <section>
-                <h2>Nombre:Person</h2>
-                <p>Especie: Caracol</p>
+                <h2>Nombre:{props.character.name}</h2>
+                <p>Especie: {props.character.species}</p>
             </section>
         </section>)
     
