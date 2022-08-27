@@ -1,9 +1,11 @@
 function CharacterDetail (props){
     const getAltName=()=>{
-        if(props.character.altname){
-           return <p>{`Alternative names: ${props.character.altname}`}</p>
-        };
-    }
+        if(props.character.altname.length !== 0){
+            return <p>{`Alternative names: ${props.character.altname}`}</p>
+        }
+    };
+
+
     return(
         <section>
             <img 
