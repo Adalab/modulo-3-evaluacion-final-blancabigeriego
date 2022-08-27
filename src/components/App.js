@@ -21,7 +21,7 @@ function App() {
   useEffect(()=>{
     CallToApi().then(dataApi=>{
      
-
+      
       setDataList(dataApi);
       
 
@@ -55,24 +55,17 @@ const handleHouseSelect = (data)=>{
 //obtener id
 
 const { pathname } = useLocation();
-console.log(pathname);
+
 const dataPath = matchPath("/character/:characterId", pathname);
 
 const characterId = dataPath !== null ? dataPath.params.characterId : null;
-console.log(characterId)
-console.log(dataList)
+
 const characterFound = dataList.find(character =>  {return character.id === parseInt(characterId) });
 
-console.log(characterFound);
+console.log(characterFound)
 
 
-// const getCharacter=()=>{
-//   console.log(dataList)
-//   const charFound = dataList.find(character => {return character.id === charId})
-//   console.log(charFound)
-//   return charFound;
-// };
-// setTimeout(getCharacter, 5000);
+
 
 
   return (

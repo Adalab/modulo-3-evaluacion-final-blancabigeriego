@@ -5,11 +5,11 @@ function CallToApi(){
             return{
                 name: character.name,
                 image: character.image,
-                alive: character.alive? "viv@" : "muert@",
+                alive: character.alive? "Alive" : "Dead",
                 species:character.species,
-                gender:character.gender,
+                gender: character.gender,
                 house: character.house,
-                alt_name: character.alternate_name,
+                altname: character.alternate_names,
                 id: index,
 
             }
