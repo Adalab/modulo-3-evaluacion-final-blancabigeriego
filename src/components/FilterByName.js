@@ -3,11 +3,24 @@ function FilterByName (props){
     const handleChange= (ev)=>{
         props.handleInputName(ev.target.value)
     };
+    const handleEnter=(ev)=>{
+        console.log(ev.keyCode)
+        if (ev.keyCode === 13){
+            ev.preventDefault()
+        }
+    };
     return(
 
         <form>
             <label name="name">Buscar por personaje:</label>
-            <input type="text" id="name" name="name" onChange={handleChange} value={props.dataList.name}></input>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                value={props.dataList.name}
+                onChange={handleChange}
+                onKeyDown={handleEnter}
+             ></input>
         </form>
     )
 }
