@@ -16,6 +16,7 @@
             width: 310px;
             height: 395px;
             padding: 30px;
+            border-radius: 60px;
             
 
         }
@@ -25,9 +26,23 @@
         text-transform: capitalize;
         margin-left: 10px;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+
 
         @media all and (min-width: 724px){
             font-size: 30px;
         }
+
+        &--alive{
+            display: inline;
+            flex-direction: row;
+        }
     }
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
 }

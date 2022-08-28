@@ -66,6 +66,7 @@ const dataPath = matchPath("/character/:characterId", pathname);
 
 const characterId = dataPath !== null ? dataPath.params.characterId : null;
 
+
 const characterFound = dataList.find(character =>  {return character.id === parseInt(characterId) });
 
 

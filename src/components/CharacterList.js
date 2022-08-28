@@ -5,8 +5,8 @@ import CharacterItem from "./CharacterItem";
 function characterList(props){
     
     const elements = props.dataList
-    
    
+    
     .filter((element)=>{
         return(
             element.name.toLowerCase().includes(props.filteredName.toLowerCase())
@@ -17,8 +17,10 @@ function characterList(props){
     .filter((element)=>{
         return element.house === props.filteredHouse;
     })
-    .map((element, index)=>{
 
+    
+    .map((element, index)=>{
+        
         
         return(
             

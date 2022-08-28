@@ -13,12 +13,17 @@
 
         background-size: contain;
 
-        &__logo{
-            width: 500px;
-            
-            
-        }
+        
      }
+
+     &__logo{
+        display: none;
+        @media all and (min-width: 920px){
+            display:flex;
+            width: 500px;}
+        
+        
+    }
     
     
 }
