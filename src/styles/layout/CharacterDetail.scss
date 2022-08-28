@@ -1,19 +1,33 @@
 .detail{
     display: flex;
-    padding: 20px;
     height: 100vh;
+
+    
+    align-items: center;
+    
 
     &__img{
         width: 210px;
         height: 295px;
         border-radius: 30px;
-        align-self: flex-start;
+        padding: 20px;
+
+        @media all and (min-width: 724px){
+            width: 310px;
+            height: 395px;
+            padding: 30px;
+            
+
+        }
     }
     &__section{
         color: whitesmoke;
         text-transform: capitalize;
-        align-self: flex-start;
         margin-left: 10px;
+        padding: 20px;
 
+        @media all and (min-width: 724px){
+            font-size: 30px;
+        }
     }
 }

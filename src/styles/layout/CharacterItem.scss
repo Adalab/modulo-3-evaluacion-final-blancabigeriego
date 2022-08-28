@@ -1,13 +1,27 @@
 .li{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     padding: 10px;
+
+    @media all and (min-width: 724px){
+        flex-direction: row;
+        justify-content: left;
+        gap: 30px;
+    }
 
 
     &__img{
         width: 210px;
         height: 295px;
         border-radius: 30px;
+
+        @media all and (min-width: 724px){
+            width: 310px;
+            height: 395px;
+        }
     }
 
     &__section{
@@ -17,6 +31,10 @@
         justify-content: center;
         padding: 10px;
         text-decoration: none;
+
+        @media all and (min-width: 724px){
+            font-size: 25px;
+        }
 
         &--name{
             
