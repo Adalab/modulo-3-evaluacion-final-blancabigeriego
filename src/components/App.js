@@ -8,6 +8,9 @@ import {Route, Routes} from 'react-router-dom';
 import '../styles/App.scss';
 import { useLocation } from 'react-router-dom';
 import { matchPath} from 'react-router-dom';
+import '../styles/App.scss';
+import '../styles/layout/mainapp.scss';
+import logo from '../images/logoTitle.png';
 
 
 
@@ -73,8 +76,11 @@ const characterFound = dataList.find(character =>  {return character.id === pars
 
   return (
     <div>
-      <header>
-        <h1>HARRY POTTER</h1>
+      <header className='header'>
+        <img className='header__logo'alt='Logo de Harry Potter'src={logo}/>
+
+        </header>
+        <main>
         <Routes>
           <Route 
             path="/" 
@@ -91,7 +97,7 @@ const characterFound = dataList.find(character =>  {return character.id === pars
             />
 
         </Routes>
-      </header>
+        </main>
       
     </div>
   );

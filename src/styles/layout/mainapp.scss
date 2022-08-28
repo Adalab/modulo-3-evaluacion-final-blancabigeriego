@@ -1,0 +1,14 @@
+.header{
+    background-color: black;
+    background-image: url(https://blog.richmond.edu/heroes/files/2016/04/635890934224265787884431994_new-harry-potter-story-halloween.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 300px;
+
+    &__logo{
+        display:none;
+        
+    }
+    
+}

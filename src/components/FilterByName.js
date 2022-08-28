@@ -1,4 +1,5 @@
 import Ls from "../services/ls";
+import '../styles/layout/FilterByName.scss';
 function FilterByName (props){
 
 
@@ -16,9 +17,10 @@ function FilterByName (props){
     };
     return(
 
-        <form>
-            <label name="name">Buscar por personaje:</label>
+        <form className="form">
+            <label className="form__label" name="name">Buscar por personaje:</label>
             <input 
+                className="form__input"
                 type="text" 
                 id="name" 
                 name="name" 
