@@ -1,7 +1,12 @@
+import Ls from "../services/ls";
 function FilterByName (props){
 
+
+    
     const handleChange= (ev)=>{
+        
         props.handleInputName(ev.target.value)
+       
     };
     const handleEnter=(ev)=>{
         
@@ -17,7 +22,7 @@ function FilterByName (props){
                 type="text" 
                 id="name" 
                 name="name" 
-                value={props.dataList.name}
+                value={Ls.get("name",props.FilterByName)}
                 onChange={handleChange}
                 onKeyDown={handleEnter}
              ></input>

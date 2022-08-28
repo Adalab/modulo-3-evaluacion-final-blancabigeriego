@@ -1,7 +1,8 @@
 import CharacterItem from "./CharacterItem";
 
-function characterList(props){
 
+function characterList(props){
+    
     const elements = props.dataList
     
    

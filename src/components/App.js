@@ -1,4 +1,5 @@
 import CallToApi from '../services/CallToApi';
+import Ls from '../services/ls';
 import CharacterDetail from './CharacterDetail';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
@@ -47,6 +48,7 @@ setPlaceholder();
 const handleInputName = (data)=>{
   
   setFilteredName(data);
+  Ls.set("name",data)
 
 };
 const handleHouseSelect = (data)=>{

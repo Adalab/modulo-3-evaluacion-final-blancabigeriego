@@ -4,8 +4,7 @@ function CharacterItem(props){
   
 
     
-   
-
+    
    const handleError=()=>{
     const html =( <li >
         <Link to={`/character/${props.element.id}`}>
@@ -27,7 +26,9 @@ function CharacterItem(props){
     if(props.element.name.toLowerCase() !== ""){
         
         return html
-    }else{return error}
+    }else{
+        
+        return error}
         
 };
    
