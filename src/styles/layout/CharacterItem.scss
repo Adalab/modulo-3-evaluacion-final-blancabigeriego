@@ -1,0 +1,32 @@
+.li{
+    display: flex;
+    color: white;
+    padding: 10px;
+
+
+    &__img{
+        width: 210px;
+        height: 295px;
+        border-radius: 30px;
+    }
+
+    &__section{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        text-decoration: none;
+
+        &--name{
+            
+            margin-bottom: 3px;
+           
+        }
+
+        &--species{
+            text-transform: capitalize;
+        }
+
+    }
+}

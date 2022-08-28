@@ -1,4 +1,5 @@
 import CharacterItem from "./CharacterItem";
+import '../styles/layout/CharacterList.scss';
 
 
 function characterList(props){
@@ -33,8 +34,8 @@ function characterList(props){
     })
     
     return(
-        <section>
-            <ul>
+        <section classname= "list">
+            <ul className="list__ul">
                {elements} 
               
             </ul>
