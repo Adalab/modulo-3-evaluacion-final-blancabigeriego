@@ -1,0 +1,23 @@
+.label-species{
+    display:flex;
+    color: whitesmoke;
+    font-size: 20px;
+    margin: 0px 60px ;
+    @media all and (min-width: 724px){
+        font-size: 30px;
+        margin : 0px 75px;
+        
+       }
+       
+}
+
+.select-species{
+    font-size: 15px;
+    width: 200px;
+    margin: 0px 60px;
+
+    @media all and(min-width: 920px){
+        font-size: 25px;
+        margin : 0px 75px;
+    }
+}

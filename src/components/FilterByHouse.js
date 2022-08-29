@@ -13,12 +13,14 @@ function FilterByHouse(props){
             className="houseselect"
             name="house" 
             id="house" 
-            value={props.FilterByHouse} 
+            value={props.filteredHouse} 
             onChange={handleChange}>
+                
                 <option value="Gryffindor">Gryffindor</option>
                 <option value="Hufflepuff">Hufflepuff</option>
                 <option value="Ravenclaw">Ranvenclaw</option>
                 <option value="Slytherin">Slytherin</option>
+                <option value="">Sin casa</option>
             </select>
         </>
     )

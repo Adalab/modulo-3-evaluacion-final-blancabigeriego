@@ -19,7 +19,7 @@ function App() {
  const [dataList, setDataList] = useState([]);
  const [filteredName, setFilteredName] = useState("");
  const[filteredHouse, setFilteredHouse] = useState("Gryffindor");
- const [filteredSpecies, setFilteredSpecies] = useState("Human");
+ const [filteredSpecies, setFilteredSpecies] = useState("human");
  
 
   //useEffect
@@ -49,7 +49,7 @@ const setPlaceholder =()=>{
   
 for (let eachElement of elementsNoPicture){
   eachElement.image ="https://www.telasdeluna.com/18765-medium_default/tela-harry-potter-king-s-cross.jpg"
-  // " https://via.placeholder.com/210x295/aabbcd/000000/?text=Harry-Potter"
+  
 };
 
 };
@@ -101,7 +101,8 @@ const characterFound = dataList.find(character =>  {return character.id === pars
             element={<><main>
             <Filters 
             dataList={dataList} 
-            handleInputName={handleInputName} filteredHouse={filteredHouse}
+            handleInputName={handleInputName} 
+            filteredHouse={filteredHouse}
             handleHouseSelect={handleHouseSelect}
             filteredSpecies={filteredSpecies}
             handleSelect={handleSelect}/>

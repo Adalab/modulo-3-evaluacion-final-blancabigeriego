@@ -39,11 +39,11 @@ function characterList(props){
          
     })
     
-
+//{"name":"Bertie Bott","alternate_names":[],"species":"human","gender":"male","house":"","dateOfBirth":"","yearOfBirth":"","wizard":true,"ancestry":"","eyeColour":"","hairColour":"","wand":{"wood":"","core":"","length":""},"patronus":"","hogwartsStudent":false,"hogwartsStaff":false,"actor":"","alternate_actors":[],"alive":true,"image":""}
 
     return(
         <section>
-            {elements.length === 0? <p className="error">No se encuentra ningún personaje que coincida con {props.filteredName}<img alt="deatheater" src={error} className="error__img" /></p> :<ul>
+            {elements.length === 0? <p className="error">No se encuentra ningún personaje que coincida con la búsqueda {props.filteredName}<img alt="deatheater" src={error} className="error__img" /></p> :<ul>
                {elements} 
               
             </ul>}

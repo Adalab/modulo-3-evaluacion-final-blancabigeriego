@@ -38,8 +38,9 @@ function CharacterDetail (props){
         }
         else if(props.character.house === "Slytherin"){
             return <img className="icon" src={sly} alt="Slytherin icon"/>
-        }
+        
     }
+}
 
 
     return(
@@ -62,7 +63,7 @@ function CharacterDetail (props){
                     Género: {props.character.gender}
                 </p>
                 <p className='detail__section--species'>
-                    Casa: {props.character.house}
+                    Casa: {props.character.house !== ""? props.character.house : "Sin casa"}
                     {getHouseIcon(props)}
                     
                 </p>

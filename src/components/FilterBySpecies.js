@@ -1,4 +1,7 @@
+import '../styles/layout/FilterBySpecies.scss';
+
 function FilterBySpecies(props){
+
 
     const handleChange =(ev)=>{
         props.handleSelect(ev.target.value)
@@ -6,8 +9,12 @@ function FilterBySpecies(props){
     }
     return(
         <>
-        <label htmlFor="species" id="species">Busca por especie</label>
+        <label 
+        className="label-species"
+        htmlFor="species" 
+        id="species">Busca por especie</label>
         <select 
+        className="select-species"
         name="species"
         id="species"
         value={props.filteredSpecies}
