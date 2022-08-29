@@ -106,7 +106,10 @@ const characterFound = dataList.find(character =>  {return character.id === pars
             filteredSpecies={filteredSpecies}
             handleSelect={handleSelect}/>
 
-            <CharacterList dataList={dataList} filteredName={filteredName} filteredHouse={filteredHouse}/>
+            <CharacterList 
+            dataList={dataList} 
+            filteredName={filteredName} filteredHouse={filteredHouse}
+            filteredSpecies={filteredSpecies}/>
           </main></>}/>
           <Route
             path="/character/:charId"

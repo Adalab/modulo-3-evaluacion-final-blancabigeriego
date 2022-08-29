@@ -20,7 +20,9 @@ function characterList(props){
         return element.house === props.filteredHouse;
     })
 
-    
+    .filter((element)=>{
+        return element.species === props.filteredSpecies;
+    })
     .map((element, index)=>{
         
         
