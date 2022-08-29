@@ -35,12 +35,15 @@ function characterList(props){
          
     })
     
+
+
     return(
         <section>
-            <ul>
+            {elements.length === 0? <p>error</p> :<ul>
                {elements} 
               
-            </ul>
+            </ul>}
+            
         </section>
     )
 }

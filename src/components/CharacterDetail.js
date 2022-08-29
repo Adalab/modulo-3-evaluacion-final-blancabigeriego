@@ -15,8 +15,8 @@ function CharacterDetail (props){
 
     const getAliveIcon =(props)=>{
 
-        const alive= <i class="fa-solid fa-heart-pulse"></i>;
-        const dead= <i class="fa-solid fa-skull-crossbones"></i>;
+        const alive= <i className="fa-solid fa-heart-pulse"></i>;
+        const dead= <i className="fa-solid fa-skull-crossbones"></i>;
         if(props.character.alive === "Alive"){
             return alive;
         }else{
