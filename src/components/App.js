@@ -19,6 +19,7 @@ function App() {
  const [dataList, setDataList] = useState([]);
  const [filteredName, setFilteredName] = useState("");
  const[filteredHouse, setFilteredHouse] = useState("Gryffindor");
+ const [filteredSpecies, setFilteredSpecies] = useState("Human");
  
 
   //useEffect
@@ -66,6 +67,10 @@ const handleHouseSelect = (data)=>{
   setFilteredHouse(data);
 };
 
+const handleSelect = (data) =>{
+  setFilteredSpecies(data)
+};
+
 //obtener id
 
 const { pathname } = useLocation();
@@ -94,8 +99,13 @@ const characterFound = dataList.find(character =>  {return character.id === pars
           <Route 
             path="/" 
             element={<><main>
-            <Filters dataList={dataList} handleInputName={handleInputName} filteredHouse={filteredHouse}
-            handleHouseSelect={handleHouseSelect}/>
+            <Filters 
+            dataList={dataList} 
+            handleInputName={handleInputName} filteredHouse={filteredHouse}
+            handleHouseSelect={handleHouseSelect}
+            filteredSpecies={filteredSpecies}
+            handleSelect={handleSelect}/>
+
             <CharacterList dataList={dataList} filteredName={filteredName} filteredHouse={filteredHouse}/>
           </main></>}/>
           <Route
