@@ -72,11 +72,12 @@ const handleSelect = (data) =>{
   setFilteredSpecies(data)
 };
 
-const handleReset = ()=>{
-  setDataList([])
+const handleReset = (ev)=>{
   
-  setFilteredHouse("Gryffindor")
-  setFilteredSpecies("human")
+setFilteredHouse("Gryffindor")
+setFilteredName("")
+setFilteredSpecies("human")
+    
 }
 
 //obtener id
@@ -109,6 +110,7 @@ const characterFound = dataList.find(character =>  {return character.id === pars
             element={<><main>
             <Filters 
             dataList={dataList} 
+            filteredName={filteredName}
             handleInputName={handleInputName} 
             filteredHouse={filteredHouse}
             handleHouseSelect={handleHouseSelect}

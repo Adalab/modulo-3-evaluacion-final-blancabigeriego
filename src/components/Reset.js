@@ -3,11 +3,11 @@ function Reset (props){
 
     const handleClick = (ev)=>{
         ev.preventDefault();
-        props.handleReset();
+        props.handleReset(ev);
     }
     return(
         <section>
-            <button onClick={handleClick}><i class="fa-solid fa-wand-sparkles"></i>Abracadabra!</button>
+            <button onClick={handleClick}><i className="fa-solid fa-wand-sparkles"></i>Abracadabra!</button>
 
         </section>
     )
