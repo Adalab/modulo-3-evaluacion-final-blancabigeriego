@@ -2,6 +2,7 @@ import CallToApi from '../services/CallToApi';
 import Ls from '../services/ls';
 import CharacterDetail from './CharacterDetail';
 import Filters from './Filters';
+import Reset from './Reset';
 import CharacterList from './CharacterList';
 import { useState, useEffect } from 'react';
 import {Route, Routes} from 'react-router-dom';
@@ -71,6 +72,13 @@ const handleSelect = (data) =>{
   setFilteredSpecies(data)
 };
 
+const handleReset = ()=>{
+  setDataList([])
+  
+  setFilteredHouse("Gryffindor")
+  setFilteredSpecies("human")
+}
+
 //obtener id
 
 const { pathname } = useLocation();
@@ -107,9 +115,12 @@ const characterFound = dataList.find(character =>  {return character.id === pars
             filteredSpecies={filteredSpecies}
             handleSelect={handleSelect}/>
 
+            <Reset handleReset={handleReset} />
+
             <CharacterList 
             dataList={dataList} 
-            filteredName={filteredName} filteredHouse={filteredHouse}
+            filteredName={filteredName} 
+            filteredHouse={filteredHouse}
             filteredSpecies={filteredSpecies}/>
           </main></>}/>
           <Route

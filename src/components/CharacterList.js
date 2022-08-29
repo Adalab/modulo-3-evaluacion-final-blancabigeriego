@@ -39,7 +39,7 @@ function characterList(props){
          
     })
     
-//{"name":"Bertie Bott","alternate_names":[],"species":"human","gender":"male","house":"","dateOfBirth":"","yearOfBirth":"","wizard":true,"ancestry":"","eyeColour":"","hairColour":"","wand":{"wood":"","core":"","length":""},"patronus":"","hogwartsStudent":false,"hogwartsStaff":false,"actor":"","alternate_actors":[],"alive":true,"image":""}
+
 
     return(
         <section>
