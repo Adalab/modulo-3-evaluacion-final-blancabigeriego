@@ -1,4 +1,6 @@
 import CharacterItem from "./CharacterItem";
+import '../styles/layout/CharacterList.scss';
+import error from "../images/error.jpg";
 
 
 
@@ -39,7 +41,7 @@ function characterList(props){
 
     return(
         <section>
-            {elements.length === 0? <p>error</p> :<ul>
+            {elements.length === 0? <p className="error">No se encuentra ningún personaje que coincida con {props.filteredName}<img alt="deatheater" src={error} className="error__img" /></p> :<ul>
                {elements} 
               
             </ul>}
