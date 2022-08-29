@@ -25,6 +25,14 @@ function App() {
   useEffect(()=>{
     CallToApi().then(dataApi=>{
      
+      const alpha = (x,y)=>{
+        if (x.name < y.name) {return -1;}
+        if (x.name > y.name) {return 1;}
+        return 0;
+      }
+
+       dataApi.sort(alpha);
+      
       
       setDataList(dataApi);
       
