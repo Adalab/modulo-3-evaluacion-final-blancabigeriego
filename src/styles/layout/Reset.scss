@@ -1,0 +1,19 @@
+.reset{
+    display: flex;
+    justify-content: center;
+
+    &__button{
+        background-color: blue;
+        color: yellow;
+        box-shadow: 2px 1px 3px 2px yellow;
+        align-self: center;
+        border-radius: 3px;
+        font-size: 15px;
+
+        &--icon{
+            font-size: 20px;
+        }
+
+
+    }
+}

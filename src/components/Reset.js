@@ -1,3 +1,5 @@
+import '../styles/layout/Reset.scss'
+
 function Reset (props){
 
 
@@ -6,8 +8,10 @@ function Reset (props){
         props.handleReset(ev);
     }
     return(
-        <section>
-            <button onClick={handleClick}><i className="fa-solid fa-wand-sparkles"></i>Abracadabra!</button>
+        <section className='reset'>
+            <button 
+            className='reset__button'
+            onClick={handleClick}><i className="fa-solid fa-wand-sparkles reset__button--icon"></i>Abracadabra!</button>
 
         </section>
     )
