@@ -8,12 +8,18 @@
     margin-top: 15px;
     gap: 13px;
 
+
+
+    @media all and (min-width: 920px){
+        gap: 23px;
+       
+    }
+
         &__label{
             
-            
-
-                @media all and (min-width: 724px){
-                font-size: 30px;
+             @media all and (min-width: 920px){
+                font-size: 20px;
+               
             }
         }
 
@@ -22,8 +28,8 @@
     
                 width: 90px;
 
-                @media all and (min-width: 724px){
-                font-size: 30px;
+                @media all and (min-width: 920px){
+                font-size: 20px;
                 width: 180px;}
             }
 

@@ -7,12 +7,11 @@
     margin-top: 10px;
     
 
-    @media all and (min-width: 724px){
+    @media all and (min-width: 920px){
 
         flex-direction: row;
-        justify-content: left;
-        gap: 30px;
-
+        
+        
         
     }
 
@@ -22,9 +21,9 @@
         height: 245px;
         border-radius: 30px;
 
-        @media all and (min-width: 724px){
-            width: 310px;
-            height: 395px;
+        @media all and (min-width: 920x){
+           width: 210px;
+           height: 295px;
         }
     }
 
@@ -36,7 +35,7 @@
        
         text-decoration: none;
 
-        @media all and (min-width: 724px){
+        @media all and (min-width: 920px){
             font-size: 25px;
         }
 

@@ -1,0 +1,9 @@
+.ul{
+
+    @media all and (min-width:920px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}

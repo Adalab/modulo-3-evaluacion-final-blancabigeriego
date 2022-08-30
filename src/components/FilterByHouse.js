@@ -8,7 +8,7 @@ function FilterByHouse(props){
     }
     return(
         <section className='house'>
-            <label className="houselabel"htmlFor="house__label">Selecciona la casa </label>
+            <label className="house__label"htmlFor="house">Selecciona la casa </label>
             <select 
             className="house__select"
             name="house" 
