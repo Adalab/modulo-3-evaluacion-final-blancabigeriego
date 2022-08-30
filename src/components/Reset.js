@@ -11,7 +11,7 @@ function Reset (props){
         <section className='reset'>
             <button 
             className='reset__button'
-            onClick={handleClick}><i className="fa-solid fa-wand-sparkles reset__button--icon"></i>Abracadabra!</button>
+            onClick={handleClick}><i className="fa-solid fa-wand-sparkles reset__button--icon"></i>Obliviate!</button>
 
         </section>
     )

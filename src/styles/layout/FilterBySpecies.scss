@@ -1,23 +1,13 @@
-.label-species{
-    display:flex;
+.species{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
     color: whitesmoke;
-    font-size: 20px;
-    margin: 0px 60px ;
-    @media all and (min-width: 724px){
-        font-size: 30px;
-        margin : 0px 75px;
-        
-       }
-       
-}
+    gap: 8px;
+    margin-top:10px;
 
-.select-species{
-    font-size: 15px;
-    width: 200px;
-    margin: 0px 60px;
-
-    @media all and(min-width: 920px){
-        font-size: 25px;
-        margin : 0px 75px;
-    }
+        &__select{
+            width: 100px;
+        }
 }

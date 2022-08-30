@@ -18,7 +18,7 @@ function FilterByName (props){
     return(
 
         <form className="form">
-            <label className="form__label" name="name">Buscar por personaje:</label>
+            <label className="form__label" name="name">Buscar por personaje</label>
             <input 
                 className="form__input"
                 type="text" 

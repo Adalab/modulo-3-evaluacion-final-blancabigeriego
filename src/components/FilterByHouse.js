@@ -7,10 +7,10 @@ function FilterByHouse(props){
         props.handleHouseSelect(ev.target.value);
     }
     return(
-        <>
-            <label className="houselabel"htmlFor="house">Selecciona la casa: </label>
+        <section className='house'>
+            <label className="houselabel"htmlFor="house__label">Selecciona la casa </label>
             <select 
-            className="houseselect"
+            className="house__select"
             name="house" 
             id="house" 
             value={props.filteredHouse} 
@@ -22,7 +22,7 @@ function FilterByHouse(props){
                 <option value="Slytherin">Slytherin</option>
                 <option value="">Sin casa</option>
             </select>
-        </>
+        </section>
     )
 };
 export default FilterByHouse;

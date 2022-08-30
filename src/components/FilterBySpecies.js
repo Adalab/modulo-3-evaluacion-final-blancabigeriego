@@ -8,13 +8,13 @@ function FilterBySpecies(props){
         console.log(ev.target.value)
     }
     return(
-        <>
+        <section className='species'>
         <label 
-        className="label-species"
+        className="species__label"
         htmlFor="species" 
         id="species">Busca por especie</label>
         <select 
-        className="select-species"
+        className="species__select"
         name="species"
         id="species"
         value={props.filteredSpecies}
@@ -38,7 +38,7 @@ function FilterBySpecies(props){
             <option value="half-human">Medio-Humano</option>
         </select>
             
-        </>
+        </section>
     )
 }
 

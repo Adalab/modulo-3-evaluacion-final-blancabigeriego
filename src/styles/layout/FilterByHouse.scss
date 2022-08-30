@@ -1,24 +1,30 @@
-.houselabel{
+.house{
+
     color: whitesmoke;
-    
-    font-size: 20px;
-    padding-left: 75px;
-    align-self: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 13px;
 
-    @media all and (min-width: 724px){
-        font-size: 30px;
-        
-       }
-       
-    
-}
+        &__label{
+            
+            
 
-.houseselect{
-    
-    width: 90px;
+                @media all and (min-width: 724px){
+                font-size: 30px;
+            }
+        }
 
-    @media all and (min-width: 724px){
-    font-size: 30px;
-    width: 180px;
-    }
-}
+
+        &__select{
+    
+                width: 90px;
+
+                @media all and (min-width: 724px){
+                font-size: 30px;
+                width: 180px;}
+            }
+
+ };
