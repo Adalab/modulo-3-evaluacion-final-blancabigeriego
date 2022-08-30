@@ -3,18 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(160, 160, 192);
     margin-top: 10px;
-    
+     
 
-    @media all and (min-width: 920px){
-
-        flex-direction: row;
-        
-        
-        
-        
-    }
+   
 
 
     &__img{
