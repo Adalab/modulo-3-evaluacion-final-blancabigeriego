@@ -1,5 +1,6 @@
 import Ls from "../services/ls";
 import '../styles/layout/FilterByName.scss';
+import PropTypes from 'prop-types';
 function FilterByName (props){
 
 
@@ -24,11 +25,19 @@ function FilterByName (props){
                 type="text" 
                 id="name" 
                 name="name" 
-                value={Ls.get("name",props.FilterByName)}
+                value={Ls.get("name",props.filteredName)}
                 onChange={handleChange}
                 onKeyDown={handleEnter}
              ></input>
         </form>
     )
+
+   
 }
+
+FilterByName.propTypes ={
+   filteredName : PropTypes.string,
+}
+
+
 export default FilterByName;

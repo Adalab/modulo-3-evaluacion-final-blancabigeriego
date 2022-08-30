@@ -1,5 +1,5 @@
 import '../styles/layout/FilterByHouse.scss';
-
+import PropTypes from 'prop-types';
 function FilterByHouse(props){
 
     
@@ -25,4 +25,8 @@ function FilterByHouse(props){
         </section>
     )
 };
+
+FilterByHouse.propTypes ={
+    filteredHouse : PropTypes.string.isRequired,
+}
 export default FilterByHouse;

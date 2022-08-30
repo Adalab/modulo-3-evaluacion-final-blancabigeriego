@@ -1,4 +1,5 @@
-import '../styles/layout/Reset.scss'
+import '../styles/layout/Reset.scss';
+import PropTypes from 'prop-types';
 
 function Reset (props){
 
@@ -15,5 +16,9 @@ function Reset (props){
 
         </section>
     )
+};
+
+Reset.propTypes ={
+    handleReset :PropTypes.func.isRequired,
 }
 export default Reset;

@@ -1,6 +1,8 @@
 import CharacterItem from "./CharacterItem";
 import '../styles/layout/List.scss';
+import '../styles/layout/CharacterList.scss';
 import error from "../images/error.jpg";
+import PropTypes from 'prop-types';
 
 
 
@@ -50,5 +52,12 @@ function characterList(props){
             
         </section>
     )
+}
+
+characterList.propTypes={
+    filteredName : PropTypes.string,
+    filteredHouse : PropTypes.string,
+    filteredSpecies : PropTypes.string,
+
 }
 export default characterList;

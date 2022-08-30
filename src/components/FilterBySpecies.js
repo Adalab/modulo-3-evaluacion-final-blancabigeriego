@@ -1,4 +1,5 @@
 import '../styles/layout/FilterBySpecies.scss';
+import PropTypes from 'prop-types';
 
 function FilterBySpecies(props){
 
@@ -42,22 +43,9 @@ function FilterBySpecies(props){
     )
 }
 
+FilterBySpecies.propTypes ={
+    filteredSpecies: PropTypes.string.isRequired,
+}
+
 export default FilterBySpecies;
 
-//  0: “human”
-// 1: “half-giant”
-// 2: “werewolf”
-// 3: “cat”
-// 4: “goblin”
-// 5: “owl”
-// 6: “ghost”
-// 7: “poltergeist”
-// 8: “three-headed dog”
-// 9: “dragon”
-// 10: “centaur”
-// 11: “house-elf”
-// 12: “acromantula”
-// 13: “hippogriff”
-// 14: “giant”
-// 15: “vampire”
-// 16: “half-human”

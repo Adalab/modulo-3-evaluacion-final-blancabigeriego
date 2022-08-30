@@ -1,6 +1,7 @@
 import FilterByName from "./FilterByName";
 import FilterByHouse from "./FilterByHouse";
 import FilterBySpecies from "./FilterBySpecies";
+import PropTypes from 'prop-types';
 
 
 function Filters(props){
@@ -14,6 +15,16 @@ function Filters(props){
         </>
     )
 
+}
+
+Filters.propTypes ={
+    dataList: PropTypes.array.isRequired,
+    filteredName: PropTypes.string.isRequired,
+    handleInputName: PropTypes.func.isRequired,
+    filteredHouse: PropTypes.string.isRequired,
+    handleHouseSelect: PropTypes.func.isRequired,
+    filteredSpecies: PropTypes.string.isRequired,
+    handleSelect: PropTypes.func.isRequired,
 }
 
 export default Filters;

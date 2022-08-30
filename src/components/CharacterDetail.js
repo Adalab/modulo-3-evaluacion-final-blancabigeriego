@@ -3,6 +3,7 @@ import gry from '../images/gryffindor.png';
 import huff from '../images/hufflepuff.png';
 import rav from '../images/ravenclaw.png';
 import sly from '../images/slytherin.png';
+import PropTypes from 'prop-types';
 
 
 
@@ -72,5 +73,9 @@ function CharacterDetail (props){
             </section>
         </section>)
     
+}
+
+CharacterDetail.propTypes ={
+    character : PropTypes.array.isRequired,
 }
 export default CharacterDetail;

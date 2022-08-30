@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import '../styles/layout/CharacterItem.scss';
+import PropTypes from 'prop-types';
 
 function CharacterItem(props){
   
@@ -25,4 +26,9 @@ function CharacterItem(props){
     );
    
 };
+
+CharacterItem.propTypes ={
+    element: PropTypes.array.isRequired,
+    filteredName: PropTypes.string.isRequired,
+}
 export default CharacterItem;
